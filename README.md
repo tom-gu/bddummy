@@ -3,14 +3,18 @@
 
 ## tic like 
 
-![tic-dev/master](https://github.com/sunn-e/bddummy/workflows/tic-dev-experiment/badge.svg?branch=master)
+### tic-dev-experiment
 
-![tic-dev/dev](https://github.com/sunn-e/bddummy/workflows/tic-dev-experiment/badge.svg?branch=dev)
+![master](https://github.com/sunn-e/bddummy/workflows/tic-dev-experiment/badge.svg?branch=master)
+
+![dev](https://github.com/sunn-e/bddummy/workflows/tic-dev-experiment/badge.svg?branch=dev)
 
 ---
 
 ## tidyverse like 
 
-![check-standard/master](https://github.com/sunn-e/bddummy/workflows/check-standard/badge.svg?branch=master)
+### check-standard
 
-![check-standard/dev](https://github.com/sunn-e/bddummy/workflows/check-standard/badge.svg?branch=dev)
+![master](https://github.com/sunn-e/bddummy/workflows/check-standard/badge.svg?branch=master)
+
+![dev](https://github.com/sunn-e/bddummy/workflows/check-standard/badge.svg?branch=dev)
