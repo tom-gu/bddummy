@@ -5,7 +5,7 @@
 on:
   workflow_run:
     workflows: ["check-standard"]
-    branches: [main]
+    branches: [ master ]
     types: 
       - completed
       - requested
@@ -13,7 +13,7 @@ on:
 name: dev-only
 
 jobs:
-  R-CMD-check:
+  r-cmd-check:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
