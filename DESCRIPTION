@@ -12,3 +12,7 @@ LazyData: true
 Suggests: 
     testthat
 RoxygenNote: 7.1.1
+Imports:
+  bdtests
+Remotes:
+  bd-R/bdtests
