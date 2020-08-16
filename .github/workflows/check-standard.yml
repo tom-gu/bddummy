@@ -23,7 +23,8 @@ jobs:
         config:
           - {os: windows-latest, r: 'release'}
           - {os: macOS-latest, r: 'release'}
-          - {os: ubuntu-latest, r: 'release'}
+          #- {os: ubuntu-latest, r: 'release'}
+          #currently giving some issues
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -62,7 +63,7 @@ jobs:
           done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
       - name: Install dependencies
         run: |
-          remotes::install_github('bd-R/bdtests', ref = 'dev', depenedencies = FALSE)
+          remotes::install_github('sunn-e/bddummy', ref = 'dev', depenedencies = FALSE)
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
