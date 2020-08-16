@@ -65,15 +65,17 @@ jobs:
         run: |          
           remotes::install_deps(dependencies = TRUE)
           #remotes::install_github('sunn-e/bddummy', ref = 'dev', depenedencies = FALSE)
-          remotes::install_github('bd-R/bdtests', ref = 'dev', depenedencies = FALSE)
-          
+          remotes::install_github('bd-R/bdtests', ref = 'dev', depenedencies = FALSE)          
           remotes::install_cran("rcmdcheck")
+          remotes::install_cran("testthat")
         shell: Rscript {0}
 
       - name: Check
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
-        run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran", "quiet = FALSE"), error_on = "warning", check_dir = "check")
+        run:  |
+          rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
+          testthat::test_package()
         shell: Rscript {0}
 
       - name: Upload check results
