@@ -1,0 +1,14 @@
+Package: bddummy
+Type: Package
+Title: bddummy
+Version: 0.1.0
+Author: Sunny Dhoke, Tomer Gueta
+Maintainer: Sunny Dhoke <sunnydhoke22@gmail.com> 
+Description: This is a dummy package.
+   This is a dummy package.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat
+RoxygenNote: 7.1.1
