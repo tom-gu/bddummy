@@ -3,5 +3,6 @@ test_that("multiplication works", {
 })
 
 test_that("add 1 works", {
-  expect_equal(foo(1), 2)
+  expect_equal(foo(1), 0)
+  # foo: x = x+1
 })
