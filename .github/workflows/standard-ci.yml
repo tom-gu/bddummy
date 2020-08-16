@@ -1,17 +1,14 @@
 # For help debugging build failures open an issue on the RStudio community with the 'github-actions' tag.
 # https://community.rstudio.com/new-topic?category=Package%20development&tags=github-actions
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - master
-      - dev
   pull_request:
-    branches:
-      - master
-      - dev
+  # for now, CRON jobs only run on the default branch of the repo (i.e. usually on master)
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron: "0 4 * * *"
+
 
 name: Standard CI
 
