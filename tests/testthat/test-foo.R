@@ -1,8 +1,14 @@
+
 test_that("multiplication works", {
   expect_equal(2 * 2, 4)
 })
 
-test_that("add 1 works", {
-  expect_equal(foo(1), 0)
-  # foo: x = x+1
+test_that("bdtest master", {
+  expect_equal(bdtests::foo(1), 2)
+  # foo_bddummy: x = x+1
+})
+
+test_that("bdtest dev", {
+  expect_equal(bdtests::foo(1), 101)
+  # foo_bddummy: x = x+1
 })
