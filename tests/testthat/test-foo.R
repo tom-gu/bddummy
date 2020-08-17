@@ -14,6 +14,7 @@ test_that("multiplication works", {
 ## if dev-dev runs
 ## 1,3 fails
 
+
 test_that("1-bddummy master", {
   expect_equal(foo_bddummy(1), 2)
 })
@@ -29,3 +30,5 @@ test_that("3-bdtest master", {
 test_that("4-bdtest dev", {
   expect_equal(bdtests::foo(1), 101)
 })
+
+

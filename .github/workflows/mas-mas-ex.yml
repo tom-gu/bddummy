@@ -13,7 +13,6 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron: "0 0/8 * * *"
-
 name: mas-mas-ex
 
 jobs:
