@@ -16,4 +16,4 @@
 #' Document a function
 #' @param x the x parameter
 #' @export
-foo_bddummy <- function(x) x + 1
+foo_bddummy <- function(x) x + 100
