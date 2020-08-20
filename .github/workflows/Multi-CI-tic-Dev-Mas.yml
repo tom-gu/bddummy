@@ -3,15 +3,20 @@
 on:
   workflow_dispatch:
   push:
+    branches:
+      - dev
   pull_request:
+    branches:
+      - dev
+
   # for now, CRON jobs only run on the default branch of the repo (i.e. usually on master)
   schedule:
     # * is a special character in YAML so you have to quote this string
-    # minute hours day month week_day
-    - cron: "0 4 * * *"
+    # Here it will run after every 8 hours starting from 0th hour of the day
+    - cron: "0 0/8 * * *"
 
 
-name: tic-dev-experiment
+name: Multi-CI-tic-Dev-Mas
 
 jobs:
   all:
@@ -98,9 +103,9 @@ jobs:
         run: |
           echo -e 'options(Ncpus = 4, pkgType = "source", repos = structure(c(CRAN = "https://cloud.r-project.org/")))' > $HOME/.Rprofile
           Rscript -e "remotes::install_github('ropensci/tic')" -e "print(tic::dsl_load())" -e "tic::prepare_all_stages()" -e "tic::before_install()" -e "tic::install()"
-# experiment
+
       - name: "[Stage] Script"
-        run: Rscript -e "tic::script()" -e "remotes::install_github('sunn-e/bddummy', ref = 'dev', depenedencies = FALSE)"
+        run: Rscript -e "tic::script()"
 
       - name: "[Stage] After Success"
         if: matrix.config.os == 'macOS-latest' && matrix.config.r == 'release'
