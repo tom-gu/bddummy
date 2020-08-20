@@ -41,3 +41,5 @@
 |----------|---|---|---|
 | Multi-CI |  ![Multi-CI-tic-Mas-Mas](https://github.com/sunn-e/bddummy/workflows/Multi-CI-tic-Mas-Mas/badge.svg)|![Multi-CI-tic-Dev-Mas](https://github.com/sunn-e/bddummy/workflows/Multi-CI-tic-Dev-Mas/badge.svg?branch=dev)|![Multi-CI-tidyverse-Mas-Mas](https://github.com/sunn-e/bddummy/workflows/Multi-CI-tidyverse-Mas-Mas/badge.svg?branch=master)|
 ---
+
+
