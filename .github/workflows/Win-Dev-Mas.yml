@@ -70,11 +70,11 @@ jobs:
           remotes::install_github('bd-R/bdchecks@dev', dependencies = FALSE, upgrade = 'never')
           remotes::install_github('bd-R/bdclean@dev', dependencies = FALSE, upgrade = 'never')
           remotes::install_github('bd-R/bdutilities@dev', dependencies = FALSE, upgrade = 'never')
-          remotes::install_github('bd-R/bdtests@dev', dependencies = FALSE, upgrade = 'never')
-          remotes::install_github('sunn-e/bddummy@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('sunn-e/bddummy@dev')
+          remotes::install_github('bd-R/bdtests@dev')
           # End "dev" here
           # Mas part
-          remotes::install_deps(dependencies = TRUE, upgrade = 'never')
+          remotes::install_deps(dependencies = TRUE)
           # Mas part
           remotes::install_cran("rcmdcheck")
           remotes::install_cran("testthat")
