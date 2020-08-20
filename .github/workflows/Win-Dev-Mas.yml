@@ -64,22 +64,17 @@ jobs:
       - name: Install dependencies
         run: |
           # Your "dev" dependencies go here
-          remotes::install_github(c('bd-R/bdDwC@dev',
-                                    'bd-R/bddwc.app@dev',
-                                    'bd-R/bdchecks@dev',
-                                    'bd-R/bdclean@dev',
-                                    'bd-R/bdutilities@dev',
-                                    'bd-R/bdutilities.app@dev',
-                                    'bd-R/bdverse@dev',
-                                    'bd-R/bdtests@dev',
-                                    'sunn-e/bddummy@dev'),
-                                    depenedencies = FALSE,
-                                    upgrade = 'never')
-                                    
+          remotes::install_github('bd-R/bdverse@dev')
+          remotes::install_github('bd-R/bdDwC@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('bd-R/bddwc.app@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('bd-R/bdchecks@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('bd-R/bdclean@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('bd-R/bdutilities@dev', dependencies = FALSE, upgrade = 'never')
+          remotes::install_github('sunn-e/bddummy@dev')
+          remotes::install_github('bd-R/bdtests@dev')
           # End "dev" here
           # Mas part
-          remotes::install_deps(dependencies = TRUE,
-                                upgrade = 'never')
+          remotes::install_deps(dependencies = TRUE)
           # Mas part
           remotes::install_cran("rcmdcheck")
           remotes::install_cran("testthat")
